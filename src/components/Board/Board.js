@@ -4,15 +4,13 @@ import Cell from "../Cell/Cell"
 
 const Board = ({ size }) => {
 
-    const randomLight = () => Math.random() < .3
-
     const createGrid = () => 
         new Array(size)
             .fill()
             .map(r => 
                 new Array(size)
                 .fill()
-                .map(c => randomLight()))
+                .map(c => Math.random() < .4))
     
     const [ board, setBoard ] = useState(createGrid())
     
@@ -32,11 +30,11 @@ const Board = ({ size }) => {
         setBoard(copy)
     }
 
-    const hasWon = () => board.every(row => row.every(cell => !cell) )
+    const gameEnds = () => board.every(row => row.every(c => !c) )
     
     return(
         <div className="Board">
-           {hasWon() 
+           {gameEnds() 
            ?    <div className="won">You won!</div> 
            :    board.map((row, rowIndex) => 
                     <div className="row" key={rowIndex}>

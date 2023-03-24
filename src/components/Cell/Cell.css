@@ -1,25 +1,19 @@
-.on {
+.on,.off{
     width: var(--size);
-    height: var(--size);
-
     border-radius: 50%;
-    background-color: var(--blue);
-
+    height: var(--size);
     border: none;
     margin: var(--size);
+}
 
+.on {
+    background-color: var(--blue);
     box-shadow: 
-    0 0 var(--size) var(--blue),
-    0 0 calc(2*var(--size)) var(--blue)
+        0 0 var(--size) var(--blue),
+        0 0 calc(2*var(--size)) var(--blue)
 }
 
 .off {
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
-    
-    border: none;
-    margin: var(--size);
     background-color: rgb(55, 55, 55);
 }
 

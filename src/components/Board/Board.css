@@ -4,26 +4,21 @@
     border-radius: 10px;
     padding: 2px;
     box-shadow: 
-        0 0 7px #fff,
-        0 0 10px #fff
+        0 0 calc(.1*var(--size)) #000,
+        0 0 calc(.5*var(--size)) #fff
 }
 
-.row {
-    display: inline-block; 
-    width: auto;
-}
 
 .won {
     color: white;
 
-    font-family: 'Bungee Outline', cursive;
-    font-size: 2.5rem;
+    font-size: calc(2*var(--size));
     letter-spacing: 2px;
     margin-bottom: 0;
-    padding: 0 20px;
+    padding: 0 var(--size);
 
     text-shadow: 
-        0 0 20px white,
-        0 0 30px white,
-        0 0 40px white;
+        0 0 calc(1*var(--size)) white,
+        0 0 calc(2*var(--size)) white,
+        0 0 calc(4*var(--size)) white;
 }

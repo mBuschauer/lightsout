@@ -6,7 +6,7 @@ const Cell = ({ rowIndex, colIndex, isOn, toggleLights }) => {
     const handleClick = () => toggleLights(rowIndex,colIndex);
 
     return <button 
-            className={isOn? "on" : "off"} 
+            className={isOn ? "on" : "off"} 
             onClick={handleClick}/>
 }
 
