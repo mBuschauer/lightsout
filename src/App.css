@@ -2,6 +2,7 @@
   --size : 25px;
   --blue : #12e7e7;
   --orange : #fea501;
+  --white : #ffffff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Neonderthaw&family=Ultra&display=swap');
@@ -9,7 +10,9 @@ html,body{
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: rgb(33, 33, 33);
+  background-image: url('/public/images/cave_wall.webp'); /* Public folder */
+  background-size: cover;
+  background-position: center;
 }
 .App {
   font-family: 'Monoton', cursive;
@@ -19,3 +22,5 @@ html,body{
   align-items: center;
   padding-top: calc(2*var(--size));
 }
+
+
