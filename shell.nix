@@ -9,6 +9,7 @@ pkgs.mkShell {
       npm install
       clear
       echo "Environment ready"
+      # npm start
     '';
 
 }
