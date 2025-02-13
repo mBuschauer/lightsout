@@ -4,13 +4,23 @@ import Cell from "../Cell/Cell"
 
 const Board = ({ size }) => {
 
-    const createGrid = () => 
-        new Array(size)
-            .fill()
-            .map(r => 
-                new Array(size)
-                .fill()
-                .map(c => Math.random() < .4))
+    // const createGrid = () => 
+    //     new Array(size)
+    //         .fill()
+    //         .map(r => 
+    //             new Array(size)
+    //             .fill()
+    //             .map(c => Math.random() < .4))
+
+    const createGrid = () => [
+        [false, false, false, true, false],
+        [false, false, false, false, false],
+        [true, false, false, false, false],
+        [false, true, false, false, false],
+        [false, true, true, false, true]
+    ];
+
+    
     
     const [ board, setBoard ] = useState(createGrid())
     
