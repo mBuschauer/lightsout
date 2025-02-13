@@ -14,21 +14,21 @@ const Board = ({ size, finished, setFinished }) => {
     //             .fill()
     //             .map(c => Math.random() < .4))
 
-    // const createGrid = () => [
-    //     [false, false, false, true, false],
-    //     [false, false, false, false, false],
-    //     [true, false, false, false, false],
-    //     [false, true, false, false, false],
-    //     [false, true, true, false, true]
-    // ];
-
     const createGrid = () => [
-        [true, false, false, false, false],
-        [true, true, false, true, false],
-        [true, false, true, true, true],
         [false, false, false, true, false],
-        [false, false, false, false, false]
+        [false, false, false, false, false],
+        [true, false, false, false, false],
+        [false, true, false, false, false],
+        [false, true, true, false, true]
     ];
+
+    // const createGrid = () => [
+    //     [true, false, false, false, false],
+    //     [true, true, false, true, false],
+    //     [true, false, true, true, true],
+    //     [false, false, false, true, false],
+    //     [false, false, false, false, false]
+    // ];
 
 
 
