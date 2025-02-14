@@ -20,6 +20,7 @@ const Victory = ({ moves }) => {
     return (
         <div className="won">
             <h2>You won!</h2>
+            <p class={"small-text"}>It took {moves.length} moves!</p>
             <p>
                 {extendedMoves[currentIndex][0] !== "See Moves?" && extendedMoves[currentIndex][0] !== "Victory!" ?
                     `${currentIndex}. [${extendedMoves[currentIndex][0] + 1},${extendedMoves[currentIndex][1] + 1}]` :
