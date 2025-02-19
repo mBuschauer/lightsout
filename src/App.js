@@ -2,9 +2,13 @@ import './App.css';
 import React, { useState, useEffect } from "react"
 import Board from './components/Board/Board';
 import Title from './components/Title/Title';
+import Counter from './components/Counter/Counter'
+import { computeHeadingLevel } from '@testing-library/react';
 
 const App = () => {
     const [won, setWon] = useState(false)
+    const [moves, setMoves] = useState([])
+
 
     useEffect(() => {
         document.title = "Twice Dead - Lights Out"; // Change tab title
@@ -29,7 +33,10 @@ const App = () => {
                 size={5}
                 finished={won}
                 setFinished={setWon}
+                moves={moves}
+                setMoves={setMoves}
             />
+            <Counter moves={moves} />
         </div>
     );
 }

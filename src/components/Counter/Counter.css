@@ -1,0 +1,91 @@
+.won {
+    color: white;
+
+    font-size: calc(2*var(--size));
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    padding: 0 var(--size);
+
+    text-shadow:
+        /* 0 0 calc(1*var(--size)) white, */
+        0 0 calc(2*var(--size)) white,
+        0 0 calc(4*var(--size)) white;
+}
+
+button {
+    color: white;
+
+
+    background-color: transparent;
+    border: none;
+    /* Optional: Removes the border */
+    outline: none;
+    /* Optional: Removes focus outline */
+}
+
+.small-text {
+    color: white;
+
+    font-size: calc(var(--size));
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    padding: 0 var(--size);
+
+    text-shadow:
+        /* 0 0 calc(1*var(--size)) white, */
+        0 0 calc(2*var(--size)) white,
+        0 0 calc(4*var(--size)) white;
+}
+
+.won-button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    /* Optional: Removes the border */
+    outline: none;
+    /* Optional: Removes focus outline */
+
+    font-size: calc(var(--size));
+    font-family: 'Monoton', cursive;
+
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    padding: 0 var(--size);
+
+    text-shadow:
+        0 0 calc(1*var(--size)) white,
+        0 0 calc(2*var(--size)) white,
+        0 0 calc(4*var(--size)) white;
+}
+
+.won-button:hover {
+    animation: flicker-white 1.5s infinite alternate;
+}
+
+.won-button:disabled {
+    color: transparent;
+    text-shadow: none;
+    animation: none;
+}
+
+@keyframes flicker-white {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 calc(var(--size)) var(--white),
+            0 0 calc(var(--size)*3) var(--white),
+            0 0 calc(var(--size)*6) var(--white);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}

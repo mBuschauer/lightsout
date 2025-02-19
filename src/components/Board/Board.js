@@ -4,7 +4,7 @@ import Cell from "../Cell/Cell"
 import Victory from "../Victory/Victory"
 
 
-const Board = ({ size, finished, setFinished }) => {
+const Board = ({ size, finished, setFinished, moves, setMoves }) => {
 
     // const createGrid = () => 
     //     new Array(size)
@@ -33,7 +33,6 @@ const Board = ({ size, finished, setFinished }) => {
 
 
     const [board, setBoard] = useState(createGrid())
-    const [moves, setMoves] = useState([])
 
     const toggleLights = (row, col) => {
         setMoves(prevList => [...prevList, [col, row]]);
